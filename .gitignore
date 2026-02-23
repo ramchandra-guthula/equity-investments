@@ -1,0 +1,44 @@
+# Environment files with secrets
+.env
+*.env
+!.env.template
+
+# Config files with secrets
+config.json
+*_config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# AWS
+.aws/
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# AgentCore
+.bedrock_agentcore.yaml
+Dockerfile
+.dockerignore
+
+# Temporary files
+*.tmp
+temp/

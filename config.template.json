@@ -1,0 +1,60 @@
+{
+  "trading_parameters": {
+    "strategy": "swing_trading",
+    "holding_period_days": {
+      "min": 2,
+      "max": 10
+    },
+    "risk_management": {
+      "max_loss_per_trade_percent": 2,
+      "max_portfolio_risk_percent": 10,
+      "trailing_stop_loss_percent": 3,
+      "take_profit_target_percent": 5,
+      "position_sizing_method": "kelly_criterion",
+      "kelly_multiplier": 0.5
+    },
+    "technical_indicators": {
+      "rsi_period": 14,
+      "rsi_overbought": 70,
+      "rsi_oversold": 30,
+      "macd_fast": 12,
+      "macd_slow": 26,
+      "macd_signal": 9,
+      "ema_short": 20,
+      "ema_long": 50,
+      "bollinger_period": 20,
+      "bollinger_std": 2
+    }
+  },
+  "phase_1_settings": {
+    "enabled": true,
+    "daily_analysis_time": "08:00 CST",
+    "notification_methods": ["email"],
+    "min_confidence_score": 0.7,
+    "max_suggestions_per_day": 3
+  },
+  "phase_2_settings": {
+    "enabled": false,
+    "auto_trade_enabled": false,
+    "max_capital_per_trade": 100,
+    "max_daily_trades": 2,
+    "require_human_approval": true,
+    "approval_timeout_minutes": 60
+  },
+  "market_data": {
+    "provider": "alpha_vantage",
+    "api_key": "USE_ENV_VAR",
+    "update_frequency_minutes": 15
+  },
+  "notifications": {
+    "email": "USE_ENV_VAR",
+    "phone": "",
+    "notify_on": [
+      "high_confidence_opportunity",
+      "stop_loss_triggered",
+      "take_profit_reached",
+      "daily_summary"
+    ]
+  },
+  "region": "us-west-2"
+}
