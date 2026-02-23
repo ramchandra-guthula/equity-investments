@@ -104,7 +104,7 @@ educational purposes only. Not financial advice.
 ## 📋 Next Steps
 
 ### 1. Verify Email (Required)
-Follow the instructions above to verify `your_email@example.com` in SES.
+Follow the instructions above to verify your email in SES.
 
 ### 2. Test Email
 ```bash
